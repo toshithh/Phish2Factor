@@ -1,0 +1,175 @@
+@import url('Roboto.ttf');
+
+
+#googlelabel{
+    margin-top: 10%;
+    width: 100%;
+    transform: scale(1.1);
+}
+
+body{
+    align-items: center;
+    background: #fff;
+    direction: ltr;
+    line-height: 1.4286;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+body, input, textarea, select, button {
+    color: #202124;
+    font-family: Roboto, "Noto Sans Myanmar UI",arial,sans-serif;
+    
+}
+
+.main{
+    min-height: 90%;
+    position: absolute;
+    top: 5%;
+    width: 36em;
+    left: 5%;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    transition: .2s;
+    height: max-content;
+    overflow: hidden;
+}
+
+.header{
+    box-sizing: inherit;
+    padding: 0 16px;
+    height: 36px;
+    border-bottom: 1px solid #dadce0;
+    color: #797979;
+}
+
+.L5wZDc{
+    top: 0;
+    height: 14px;
+    position: relative;
+    top: 1px;
+    width: 14px;
+}
+
+.headText{
+    position: absolute;
+    top: 1ex;
+    align-items: center;
+    left: 0;
+    right: 0;
+    font-size: inherit;
+    height: 36px;
+    padding: 0 16px;
+    width: inherit;
+}
+
+h1{
+    font-weight: 200;
+    margin-bottom: 0;
+}
+.jXeDnc{
+    margin: 2em;
+    margin-bottom: 2.6em;
+}
+
+#emailInput, #emailInput1{
+    height: 42px;
+    width: 28.8em;
+    color: #797979;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+}
+
+input{
+    line-height: 24px;
+    width: 100%;
+    border: none;
+    font-size: medium;
+    color: #484848;
+    outline: none;
+    padding-top: 11px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(52, 126, 255);
+}
+
+.info{
+    width: 30.6em; text-align: left; color: #797979;
+}
+
+.info1{
+    font-size: 1.2em;
+    text-align: center;
+    width: 85%;
+    margin-top: 0.4em;
+    max-width: 30.6em;
+    font-family: Roboto,'Noto Sans Myanmar UI',arial,sans-serif;  
+}
+
+input#next, #next1{
+    background-color: rgb(52,126,255); color: white; height: 36px; border: none; border-radius: 4px;
+    text-align: center;
+    width: max-content;
+    padding-top: 0;
+}
+
+#EnmJq{
+    height: 32px;
+    border: 1px solid #dadce0;
+    width: max-content;
+    border-radius: 16px;
+}
+
+.shpwd{
+    color: rgb(52,126,255);
+    height: 1em;
+}
+
+.main2{
+    line-height: 1;
+}
+
+
+@media (orientation: portrait){
+    .main{
+        min-height: 50%;
+        height: max-content;
+        width: 100%;
+        left: 0;
+        top:0;
+        border-radius: 0;
+        border: none;
+    }
+    .info{
+        width: 85%;
+    }
+    #emailInput, #emailInput1{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .main{
+        min-height: 50%;
+        height: max-content;
+        width: 100%;
+        left: 0;
+        top:0;
+        border-radius: 0;
+    }
+    .info{
+        width: 85%;
+    }
+    #emailInput, #emailInput1{
+        width: 80%;
+    }
+}
+
+.uac{
+    height: 20px;
+    width: 20px;
+}
+

