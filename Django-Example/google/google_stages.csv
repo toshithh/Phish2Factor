@@ -1,0 +1,6 @@
+stage,text,element,actions
+1,Sign In|;use your google account|; Forgot email?,Email or phone,"select, username, enter"
+E1,Sign In|;use your google account|; Forgot email?|;Enter a valid email or phone number,Email or phone,"send error, select, username, enter"
+2,Welcome|;Show password|;Forgot password?|;Enter your password,Enter your password,"select, password, enter"
+E2,Welcome|;Show password|;Forgot password?|;Enter your password|;Wrong password|;Try again,Enter your password,"send error, select, password, enter"
+3,Check your device|;Google sent a notification|;Step Verification|;{username},Google sent a notification to your,"read, send"

